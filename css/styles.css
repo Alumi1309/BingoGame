@@ -6,12 +6,18 @@ body{
     font-family:  'Courier New', sans-serif;
 }
 .container{
-    width:50vw;
     margin-left: auto;
     margin-right: auto;
 }
+
+div[type="textfield"]{
+    width:60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 input[type="num"]{
-    width:100%;
+    width:60vw;
     height: 15vh;
     padding: 7px;
     border-radius: 2vh;
@@ -23,10 +29,11 @@ input[type="num"]{
     margin-right: auto;
 }
 input[type="text"]{
-    font-size: 3vh;
+    font-size: 2vh;
     border-radius: 1vh;
     text-align: center;
 
+    width:50vw;
 }
 
 fieldset{
@@ -40,20 +47,20 @@ legend{
 }
 
 #enstrp{
-    width:80%;
+    width:50vw;
     height: 2vh;
     text-align: center;
     margin-top: 3vh;
     margin-left: auto;
     margin-right: auto;
-    font-size: 3vh;
+    font-size: 2vh;
 }
 #jastrp{
-    width:80%;
+    width:50vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 10vh;
+    font-size: 5vh;
 }
 
 #table{
