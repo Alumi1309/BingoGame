@@ -158,6 +158,8 @@ function DrawTable()
                 cell.appendChild(document.createTextNode(cellpos+1));
             }
 
+            cell.style.padding = "0.5vh";
+
             if(bingoNumList[cellpos+1])
             {
                 cell.style.backgroundColor = "#888888";

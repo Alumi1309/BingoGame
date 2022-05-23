@@ -1,15 +1,17 @@
 #btn {
-    margin: 30px auto 0;
-    margin-bottom: 30px;
-    padding: 4px;
-    width: 100px;
-    height: 100px;
+    margin-top:8vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    padding: 1vh;
+    width: 20vh;
+    height: 20vh;
     border-radius: 50%;
     background: #FF2200;
     text-align: center;
-    line-height: 100px;
+    line-height: 20vh;
     color: #000;
-    font-size: 25px;
+    font-size: 5vh;
     font-weight: bold;
     box-shadow: 2px 5px 0 #aa2200;
     user-select: none;
@@ -17,6 +19,6 @@
 
 #btn:active {
     box-shadow: 0 1px 0 #aa2200;
-    margin-top: 34px;
-    margin-bottom: 26px;
+    margin-top: 9vh;
+    margin-bottom: 4vh;
 }
