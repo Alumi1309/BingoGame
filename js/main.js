@@ -4,6 +4,8 @@ var bingoNumList = new Array();
 var bingoMaxNum = 75;
 var RemainingNum;
 
+var isSpeeking = false;
+
 (function(){
     'use strict';
     InitTranslate();
@@ -14,6 +16,7 @@ var RemainingNum;
     var btn = document.getElementById('btn');
     var curnum = document.getElementById("curnum");
 
+    speechSynthesis.getVoices();
     /*
     slider.addEventListener("change", function(){
         label.innerHTML = this.value;
@@ -31,7 +34,10 @@ var RemainingNum;
         }
         else
         {
-            GetNum();
+            if(isSpeeking === false)
+            {
+                GetNum();
+            }
         }
     });
 })();
@@ -78,6 +84,7 @@ function GetNum()
     enstr.value = en;
     jastr.value = ja;
 
+    isSpeeking = true;
     SpeakEnNum(hitNum);
     SpeakJaNum(hitNum);
 
@@ -97,6 +104,8 @@ function SpeakEnNum(num)
     var ssu = new SpeechSynthesisUtterance();
     ssu.text = num;
     ssu.lang = 'en-US';
+
+    
     var voices = speechSynthesis.getVoices();
     var voice = voices.find(function(_voice){
         return _voice.lang === 'en-US';
@@ -114,7 +123,13 @@ function SpeakJaNum(num)
     var ssu = new SpeechSynthesisUtterance();
     ssu.text = num;
     ssu.lang = 'ja-JP';
+
     speechSynthesis.speak(ssu); 
+
+    ssu.onend = function(event) 
+    {
+        isSpeeking = false;
+    }
 }
 
 function DrawTable()
