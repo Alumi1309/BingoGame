@@ -97,6 +97,9 @@ function SpeakEnNum(num)
     var ssu = new SpeechSynthesisUtterance();
     ssu.text = num;
     ssu.lang = 'en-US';
+    var voice = speechSynthesis.getVoices().find(function(voice){
+        return voice.name === 'Google UK English Female' || voice.name === 'Alice';
+    });
     speechSynthesis.speak(ssu);
 }
 
