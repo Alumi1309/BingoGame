@@ -23,6 +23,18 @@ var isSpeeking = false;
     });
     */
 
+    // ピンチズーム禁止
+    document.body.addEventListener("touchstart", function(e){
+        if (e.touches && e.touches.length > 1) {
+           e.preventDefault();
+        }
+    }, {passive: false});
+    document.body.addEventListener("touchmove", function(e){
+        if (e.touches && e.touches.length > 1) {
+            e.preventDefault();
+        }
+    }, {passive: false});
+	
     btn.addEventListener('click', function(){
         document.getElementById('btn').innerHTML = "Push";
         document.getElementById('btn-style').href = "css/buttonGetNum.css";
