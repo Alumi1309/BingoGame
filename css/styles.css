@@ -3,6 +3,7 @@ html {
     touch-action: manipulation;
   }
 body{
+	user-select: none;
     height: 100vh;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
