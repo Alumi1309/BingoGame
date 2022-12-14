@@ -1,7 +1,15 @@
+html{
+}
+body{
+}
 html {
+    overflow: hidden;
     touch-action: manipulation;
   }
 body{
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: #efefef;
     font-family:  'Courier New', sans-serif;
 }
