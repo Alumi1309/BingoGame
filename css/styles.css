@@ -12,7 +12,6 @@ body{
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
     height: 100vh;
-    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     background: #efefef;
     font-family:  'Courier New', sans-serif;
